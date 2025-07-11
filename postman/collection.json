@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "47d0250b-7077-4cbb-9a3f-3dda85209886",
+		"name": "be-test-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27495191",
+		"_collection_link": "https://blue-spaceship-652962.postman.co/workspace/Team-Workspace~b5ff5fad-025a-4b21-8b09-0a30b0fd7034/collection/27495191-47d0250b-7077-4cbb-9a3f-3dda85209886?action=share&source=collection_link&creator=27495191"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Doe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john.doe@user.user",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base-url}}/users",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/users",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "perPage",
+									"value": "10",
+									"description": "10|25|50",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{id}/update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Doe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john.doe@user.user",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base-url}}/users/1",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{id}/show",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/users/1",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/users/1",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Bosh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john.doe@user.user",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+1234567890",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "New adress",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Maimi",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "FL",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base-url}}/companies",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/companies",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"companies"
+							],
+							"query": [
+								{
+									"key": "perPage",
+									"value": "10",
+									"description": "10|25|50",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{id}/update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Bosh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john.doe@user.user",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+1234567890",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "New adress",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Maimi",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "FL",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base-url}}/companies/1",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{id}/show",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/companies/1",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/companies/1",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"if (jsonData.data && jsonData.data.access) {\r",
+							"\tlet token = jsonData.data.access.token;\r",
+							"\r",
+							"\tpm.collectionVariables.set('token', token);\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "{{admin-email}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "{{admin-password}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "{{user-email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{user-password}}",
+							"type": "text"
+						},
+						{
+							"key": "remember",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base-url}}/auth/login",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}",
+					"host": [
+						"{{base-url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.request.headers.add({\r",
+					"    key: 'Accept',\r",
+					"    value: 'application/json'\r",
+					"})"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "admin-email",
+			"value": "admin@admin.admin",
+			"type": "string"
+		},
+		{
+			"key": "admin-password",
+			"value": "admin",
+			"type": "string"
+		},
+		{
+			"key": "user-email",
+			"value": "user@user.user",
+			"type": "string"
+		},
+		{
+			"key": "user-password",
+			"value": "user",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
